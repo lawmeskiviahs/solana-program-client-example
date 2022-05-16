@@ -21,6 +21,7 @@ export async function establishPayer(): Promise<void> {
   }
 export async function sayHello(): Promise<void> {
   const greetedPubkey = new PublicKey("Enter pubkey of the account that has to be passed")
+  const programId = new PublicKey("Enter id of the program to be called")
   const instruction = new TransactionInstruction({
     keys: [{pubkey: greetedPubkey, isSigner: false, isWritable: true}],
     programId,
